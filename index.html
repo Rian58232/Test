@@ -61,17 +61,20 @@
     }
     .menu-toggle {
       display: none;
-      font-size: 1.5em;
+      font-size: 1.8em;
       color: var(--branco);
       cursor: pointer;
       position: absolute;
       top: 20px;
       right: 20px;
-      transition: transform 0.3s ease;
-      z-index: 2001;
+      z-index: 3000;
+      padding: 10px;
+      pointer-events: auto;
+      opacity: 1;
+      visibility: visible;
     }
     .menu-toggle:hover {
-      transform: rotate(90deg);
+      color: var(--azul-facebook);
     }
     .nav {
       display: flex;
@@ -629,7 +632,13 @@
       header { padding: 15px 20px; }
       header h1 { font-size: 2.2em; }
       header img { max-height: 50px; }
-      .menu-toggle { display: block; }
+      .menu-toggle {
+        display: block;
+        opacity: 1 !important;
+        visibility: visible;
+        font-size: 1.8em;
+        padding: 10px;
+      }
       .nav { display: none; }
       .nav.active {
         display: flex;
@@ -642,7 +651,7 @@
       .home { padding: 30px 15px; }
       .home h2 { font-size: 2.2em; }
       .home p { font-size: 1em; }
-      .home video { max-width: 100%; max-height: 80px; }
+      .home video { max-width: 100%; max-height: 120px; }
       .highlight-item { width: 100%; max-width: 200px; padding: 15px; }
       .about, .experience, .contact { padding: 30px 15px; }
       .about h2, .experience h2, .contact h2 { font-size: 2.2em; }
@@ -826,6 +835,7 @@
 
   <script>
     let currentSlides = { fibra: 0, vinil: 0, azulejo: 0 };
+    let isToggling = false;
     function showSlide(type, index) {
       const carousel = document.getElementById(`${type}Carousel`);
       const slides = carousel.children;
@@ -849,9 +859,13 @@
       document.getElementById('imageModal').style.display = 'flex';
     }
     function closeModal() { document.getElementById('imageModal').style.display = 'none'; }
-    function toggleMenu() {
+    function toggleMenu(event) {
+      event.preventDefault();
+      if (isToggling) return;
+      isToggling = true;
       const nav = document.querySelector('.nav');
       nav.classList.toggle('active');
+      setTimeout(() => { isToggling = false; }, 300);
     }
     document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
     document.querySelector('.menu-toggle').addEventListener('touchstart', toggleMenu);
