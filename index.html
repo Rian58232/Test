@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Tatu Piscinas - Instalação completa de piscinas de fibra, vinil e azulejo em todo Mato Grosso do Sul. Baseada em Dourados, MS." />
+  <meta name="keywords" content="piscinas, fibra, vinil, azulejo, instalação completa, Mato Grosso do Sul, MS, Dourados" />
+  <title>Tatu Piscinas - Piscinas de Qualidade em MS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --azul-facebook: #1877F2;
+      --azul-escuro: #0A3D62;
+      --branco: #FFFFFF;
+      --cinza-claro: #F8F9FA;
+      --cinza-medio: #333333;
+      --cinza-escuro: #1A1A1A;
+      --cinza-medio-dark: #2B2B2B;
+      --sombra-suave: 0 3px 10px rgba(0, 0, 0, 0.08);
+      --whatsapp-verde: #25D366;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cinza-claro);
+      color: var(--cinza-medio);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(90deg, var(--cinza-escuro), var(--azul-escuro));
+      padding: 20px 40px;
+      text-align: center;
+      color: var(--branco);
+      z-index: 1000;
+      box-shadow: var(--sombra-suave);
+    }
+    header img {
+      max-height: 60px;
+      transition: transform 0.3s ease;
+    }
+    header img:hover {
+      transform: scale(1.05);
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8em;
+      margin-top: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--branco);
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      animation: fadeInDown 0.8s ease-out;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      color: var(--branco);
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      transition: transform 0.3s ease;
+    }
+    .menu-toggle:hover {
+      transform: rotate(90deg);
+    }
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 12px;
+    }
+    .nav a {
+      color: var(--azul-facebook);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 1em;
+    }
+    .nav a:hover {
+      background: var(--cinza-medio-dark);
+      color: var(--branco);
+      transform: scale(1.02);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+    .nav.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--cinza-escuro);
+      padding: 20px;
+      box-shadow: var(--sombra-suave);
+      animation: slideDown 0.4s ease-out;
+    }
+    .container {
+      max-width: 1400px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .home {
+      text-align: center;
+      padding: 60px 40px;
+      background: var(--cinza-claro);
+      color: var(--cinza-medio);
+      border-radius: 10px;
+      margin-bottom: 60px;
+      box-shadow: var(--sombra-suave);
+      animation: fadeIn 0.8s ease-out;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #CCCCCC;
+    }
+    .home::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23fff" fill-opacity="0.05" d="M0,128L48,138.7C96,149,192,171,288,170.7C384,171,480,149,576,144C672,139,768,149,864,154.7C960,160,1056,160,1152,149.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E') no-repeat bottom;
+      opacity: 0.05;
+    }
+    .home h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: var(--cinza-escuro);
+      letter-spacing: 0.5px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    .home p {
+      font-size: 1.3em;
+      margin-bottom: 25px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeInUp 0.6s ease-out 0.2s backwards;
+      font-weight: 400;
+    }
+    .home video {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      border: 1px solid #CCCCCC;
+      transition: transform 0.3s ease;
+    }
+    .home video:hover {
+      transform: scale(1.02);
+    }
+    .highlight {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .highlight-item {
+      background: var(--branco);
+      padding: 20px;
+      border-radius: 8px;
+      width: 230px;
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease-out backwards;
+      border: 1px solid #CCCCCC;
+    }
+    .highlight-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--sombra-suave);
+    }
+    .highlight-item h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      color: var(--cinza-escuro);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .highlight-item p {
+      font-size: 1.1em;
+      color: var(--cinza-medio);
+      font-weight: 400;
+    }
+    .about {
+      padding: 60px;
+      background: var(--cinza-claro);
+      border-radius: 10px;
+      box-shadow: var(--sombra-suave);
+      margin-bottom: 60px;
+      border: 1px solid #CCCCCC;
+      animation: fadeIn 0.8s ease-out;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23fff" fill-opacity="0.05" d="M0,128L48,138.7C96,149,192,171,288,170.7C384,171,480,149,576,144C672,139,768,149,864,154.7C960,160,1056,160,1152,149.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E') no-repeat bottom;
+      opacity: 0.05;
+    }
+    .about h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5em;
+      color: var(--cinza-escuro);
+      margin-bottom: 20px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      letter-spacing: 0.5px;
+    }
+    .about h2 i {
+      color: var(--cinza-medio);
+      font-size: 1.8em;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .about h2 i:hover {
+      color: var(--cinza-medio-dark);
+      transform: rotate(15deg);
+    }
+    .about p {
+      font-size: 1.2em;
+      color: var(--cinza-medio);
+      max-width: 900px;
+      margin: 0 auto 15px;
+      font-weight: 400;
+    }
+    .about::after {
+      content: '\f773';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.8em;
+      color: var(--cinza-escuro);
+      opacity: 0.15;
+    }
+    .experience {
+      padding: 60px;
+      background: var(--branco);
+      border-radius: 10px;
+      box-shadow: var(--sombra-suave);
+      margin-bottom: 60px;
+      text-align: center;
+      color: var(--cinza-medio);
+      animation: fadeIn 0.8s ease-out;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #CCCCCC;
+    }
+    .experience::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23fff" fill-opacity="0.05" d="M0,128L48,138.7C96,149,192,171,288,170.7C384,171,480,149,576,144C672,139,768,149,864,154.7C960,160,1056,160,1152,149.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E') no-repeat bottom;
+      opacity: 0.05;
+    }
+    .experience h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: var(--cinza-escuro);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: 0.5px;
+    }
+    .experience h2 i {
+      color: var(--cinza-medio);
+      font-size: 1.8em;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .experience h2 i:hover {
+      color: var(--cinza-medio-dark);
+      transform: rotate(15deg);
+    }
+    .experience .highlight-number {
+      font-size: 1.0em;
+      font-weight: 700;
+      color: var(--branco);
+      background: var(--azul-escuro);
+      padding: 8px 16px;
+      border-radius: 50%;
+      text-shadow: 0 0 4px rgba(24, 119, 242, 0.2);
+      animation: pulse 2.5s infinite ease-in-out;
+    }
+    .experience p {
+      font-size: 1.2em;
+      max-width: 900px;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+    .experience::after {
+      content: '\f2e7';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.8em;
+      color: var(--cinza-escuro);
+      opacity: 0.15;
+    }
+    .types {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+    .types p {
+      font-size: 1.3em;
+      color: var(--azul-escuro);
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    .card {
+      background: var(--branco);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: var(--sombra-suave);
+      text-align: center;
+      transition: all 0.3s ease;
+      animation: fadeInRight 0.6s ease-out backwards;
+      border: 1px solid #CCCCCC;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+    }
+    .card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2em;
+      color: var(--cinza-escuro);
+      margin-bottom: 15px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .card p {
+      font-size: 1.1em;
+      color: var(--cinza-medio);
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    .interest-btn {
+      background: var(--azul-escuro);
+      color: var(--branco);
+      padding: 12px 25px;
+      border-radius: 20px;
+      font-size: 1.1em;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--branco);
+      animation: scaleIn 0.5s ease-out backwards;
+    }
+    .interest-btn:hover {
+      background: var(--cinza-medio-dark);
+      transform: scale(1.02);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+    }
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+    .carousel-images img {
+      width: 100%;
+      flex-shrink: 0;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border: 1px solid #CCCCCC;
+      position: relative;
+    }
+    .carousel-images img:hover {
+      transform: scale(1.03);
+    }
+    .carousel-images .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.6));
+      color: var(--branco);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 1.2em;
+    }
+    .carousel-images img:hover + .overlay, .carousel-images .overlay:hover {
+      opacity: 1;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--cinza-claro);
+      color: var(--cinza-escuro);
+      border: 1px solid #CCCCCC;
+      padding: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    .carousel-btn:hover {
+      background: var(--cinza-medio-dark);
+      color: var(--branco);
+      border-color: var(--cinza-medio-dark);
+    }
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+    .carousel-dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .carousel-dot {
+      height: 10px;
+      width: 10px;
+      background: var(--cinza-claro);
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .carousel-dot.active {
+      background: var(--azul-facebook);
+      transform: scale(1.2);
+    }
+    .contact {
+      padding: 60px;
+      background: var(--cinza-claro);
+      border-radius: 10px;
+      box-shadow: var(--sombra-suave);
+      text-align: center;
+      margin-bottom: 60px;
+      border: 1px solid #CCCCCC;
+      animation: fadeIn 0.8s ease-out;
+    }
+    .contact h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5em;
+      color: var(--cinza-escuro);
+      margin-bottom: 20px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      letter-spacing: 0.5px;
+    }
+    .contact h2 i {
+      color: var(--cinza-medio);
+      font-size: 1.8em;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .contact h2 i:hover {
+      color: var(--cinza-medio-dark);
+      transform: rotate(15deg);
+    }
+    .contact-info p {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 400;
+    }
+    .contact-info a {
+      color: var(--cinza-medio);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .contact-info a:hover {
+      color: var(--cinza-medio-dark);
+      text-decoration: underline;
+    }
+    .contact-info .phone-icon, .contact-info .facebook-icon {
+      font-size: 1.2em;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .contact-info .phone-icon:hover, .contact-info .facebook-icon:hover {
+      transform: scale(1.1);
+      color: var(--cinza-medio-dark);
+    }
+    .contact-info .phone-icon { color: var(--cinza-medio); }
+    .contact-info .facebook-icon { color: var(--cinza-medio); }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    .modal img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 8px;
+      border: 1px solid #CCCCCC;
+      box-shadow: var(--sombra-suave);
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: var(--branco);
+      font-size: 28px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .modal-close:hover {
+      color: var(--cinza-medio-dark);
+      transform: scale(1.1);
+    }
+    footer {
+      background: var(--cinza-escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 25px;
+      box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.1);
+    }
+    .footer-content p {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+    .footer-content a {
+      color: var(--branco);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .footer-content a:hover {
+      color: var(--cinza-medio-dark);
+    }
+    .footer-content .phone-icon, .footer-content .facebook-icon {
+      font-size: 1.2em;
+      color: var(--cinza-medio);
+      transition: color 0.3s ease;
+    }
+    .footer-content .phone-icon:hover, .footer-content .facebook-icon:hover {
+      color: var(--cinza-medio-dark);
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: var(--azul-escuro);
+      color: var(--branco);
+      padding: 12px 25px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: 500;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      z-index: 1500;
+      border: 1px solid var(--branco);
+      animation: scaleIn 0.5s ease-out backwards;
+    }
+    .whatsapp-button:hover {
+      background: var(--cinza-medio-dark);
+      transform: scale(1.05);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+    }
+    .whatsapp-button i {
+      margin-right: 8px;
+      font-size: 1.2em;
+      color: var(--whatsapp-verde);
+      transition: color 0.3s ease;
+    }
+    .whatsapp-button:hover i {
+      color: var(--cinza-medio-dark);
+    }
+    @media (max-width: 768px) {
+      header { padding: 15px 20px; }
+      header h1 { font-size: 2.2em; }
+      header img { max-height: 50px; }
+      .menu-toggle { display: block; }
+      .nav { display: none; }
+      .nav.active { display: flex; }
+      .nav a { font-size: 0.9em; padding: 8px 15px; }
+      .container { padding: 20px 10px; }
+      .home { padding: 30px 15px; }
+      .home h2 { font-size: 2.2em; }
+      .home p { font-size: 1em; }
+      .home video { max-width: 100%; max-height: 80px; }
+      .highlight-item { width: 100%; max-width: 200px; padding: 15px; }
+      .about, .experience, .contact { padding: 30px 15px; }
+      .about h2, .experience h2, .contact h2 { font-size: 2.2em; }
+      .about h2 i, .experience h2 i, .contact h2 i { font-size: 1.5em; }
+      .about p, .experience p { font-size: 1em; }
+      .types { grid-template-columns: 1fr; gap: 20px; }
+      .types p { font-size: 1em; }
+      .card { padding: 20px; }
+      .card h3 { font-size: 1.6em; }
+      .card p { font-size: 1em; }
+      .carousel-images img { height: 140px; }
+      .carousel-images .overlay { font-size: 0.9em; }
+      .carousel-btn { padding: 6px; font-size: 12px; }
+      .carousel-dot { height: 8px; width: 8px; }
+      .contact-info p { font-size: 1em; }
+      .interest-btn { padding: 10px 20px; font-size: 1em; }
+      .whatsapp-button { padding: 10px 20px; font-size: 1em; bottom: 20px; right: 20px; }
+      .whatsapp-button i { font-size: 1.1em; }
+      .modal img { max-width: 90%; max-height: 75%; }
+    }
+    @media (min-width: 1200px) {
+      header { padding: 25px 50px; }
+      header h1 { font-size: 3.2em; }
+      .nav a { font-size: 1.1em; padding: 12px 25px; }
+      .home { padding: 60px 50px; }
+      .home h2 { font-size: 3.2em; }
+      .home p { font-size: 1.4em; }
+      .highlight-item { width: 250px; }
+      .about h2, .experience h2, .contact h2 { font-size: 2.8em; }
+      .about h2 i, .experience h2 i, .contact h2 i { font-size: 2em; }
+      .about p, .experience p { font-size: 1.3em; }
+      .types p { font-size: 1.4em; }
+      .card h3 { font-size: 2.2em; }
+      .card p { font-size: 1.2em; }
+      .carousel-images img { height: 240px; }
+      .carousel-images .overlay { font-size: 1.2em; }
+      .contact-info p { font-size: 1.3em; }
+    }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInRight { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Logo Tatu Piscinas">
+    <h1>Tatu Piscinas</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">Sobre</a>
+      <a href="#experience">Experiência</a>
+      <a href="#types">Tipos</a>
+      <a href="#contact">Contato</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="home" class="home">
+      <h2>Bem-vindo à Tatu Piscinas</h2>
+      <p>Transforme seu quintal num point brabo com nossas piscinas de fibra, vinil ou azulejo. Somos de Dourados e levamos qualidade pra todo o Mato Grosso do Sul! <span style="color: var(--azul-escuro); font-weight: 600;">Bora realizar esse sonho?</span></p>
+      <p>Quer saber mais? Chama no WhatsApp e bora conversar!</p>
+      <video controls preload="metadata">
+        <source src="video_placeholder.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+      <div class="highlight">
+        <div class="highlight-item">
+          <h4>Piscina de Fibra</h4>
+          <p>Rápida e econômica</p>
+        </div>
+        <div class="highlight-item">
+          <h4>Piscina de Vinil</h4>
+          <p>Personalização única</p>
+        </div>
+        <div class="highlight-item">
+          <h4>Piscina de Azulejo</h4>
+          <p>Elegância duradoura</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2><i class="fas fa-water"></i> Sobre Nós</h2>
+      <p>Somos a Tatu Piscinas, uma galera de Dourados que ama construir piscinas que viram o point da casa. Com atendimento próximo e honesto, transformamos seu quintal num lugar pra curtir com a família e os amigos.</p>
+      <p>Há mais de 10 anos no mercado, já entregamos milhares de piscinas em todo o Mato Grosso do Sul. <span style="color: var(--azul-escuro); font-weight: 600;">Cada projeto é feito com capricho, como se fosse pro nosso próprio quintal!</span></p>
+    </section>
+
+    <section id="experience" class="experience">
+      <h2><i class="fas fa-medal"></i> <span class="highlight-number">10</span> Anos de Excelência</h2>
+      <p>Desde 2015, a Tatu Piscinas tá fazendo história no Mato Grosso do Sul. Com uma década de experiência, entregamos qualidade, confiança e durabilidade em cada piscina. São milhares de clientes felizes e momentos de curtição garantidos!</p>
+    </section>
+
+    <section id="types" class="types">
+      <p>Projetos realizados por nós, com capricho e qualidade em cada detalhe!</p>
+      <div class="card fibra">
+        <div class="carousel">
+          <div class="carousel-images" id="fibraCarousel">
+            <img src="fibra1.jpg" alt="Piscina de Fibra instalada pela Tatu Piscinas em MS" onclick="openModal(this.src)">
+            <div class="overlay">Instalação Rápida!</div>
+            <img src="fibra2.jpg" alt="Piscina de Fibra instalada pela Tatu Piscinas em MS" onclick="openModal(this.src)">
+            <div class="overlay">Custo-Benefício!</div>
+            <img src="fibra3.jpg" alt="Piscina de Fibra instalada pela Tatu Piscinas em MS" onclick="openModal(this.src)">
+            <div class="overlay">Qualidade Garantida!</div>
+          </div>
+          <button class="carousel-btn prev" onclick="prevSlide('fibra')">❮</button>
+          <button class="carousel-btn next" onclick="nextSlide('fibra')">❯</button>
+          <div class="carousel-dots" id="fibraDots"></div>
+        </div>
+        <h3>Piscina de Fibra</h3>
+        <p>Praticidade total, com instalação rápida e preço que cabe no bolso. Vem com motor, filtro e kit de limpeza. Atendemos todo MS! <span style="font-size: 0.9em;">*Calçada não inclusa.</span></p>
+        <a href="https://wa.me/556796078271?text=Olá,%20tenho%20interesse%20na%20piscina%20de%20fibra!" class="interest-btn">Tenho Interesse</a>
+      </div>
+      <div class="card vinil">
+        <div class="carousel">
+          <div class="carousel-images" id="vinilCarousel">
+            <img src="vinil1.jpg" alt="Piscina de Vinil instalada pela Tatu Piscinas em MS" onclick="openModal(this.src)">
+            <div class="overlay">Design Personalizado!</div>
+            <img src="vinil2.jpg" alt="Piscina de Vinil instalada pela Tatu Piscinas em MS" onclick="openModal(this.src)">
+            <div class="overlay">Manutenção Simples!</div>
+            <img src="vinil3.jpg" alt="Piscina de Vinil instalada pela Tatu Piscinas em MS" onclick="openModal(this.src)">
+            <div class="overlay">Alta Durabilidade!</div>
+          </div>
+          <button class="carousel-btn prev" onclick="prevSlide('vinil')">❮</button>
+          <button class="carousel-btn next" onclick="nextSlide('vinil')">❯</button>
+          <div class="carousel-dots" id="vinilDots"></div>
+        </div>
+        <h3>Piscina de Vinil</h3>
+        <p>Deixa sua piscina com a sua cara, com manutenção fácil e resistência top. Inclui instalação completa e kit de limpeza. Atendemos todo MS! <span style="font-size: 0.9em;">*Calçada não inclusa.</span></p>
+        <a href="https://wa.me/556796078271?text=Olá,%20tenho%20interesse%20na%20piscina%20de%20vinil!" class="interest-btn">Tenho Interesse</a>
+      </div>
+      <div class="card azulejo">
+        <div class="carousel">
+          <div class="carousel-images" id="azulejoCarousel">
+            <img src="azulejo1.jpg" alt="Piscina de Azulejo instalada pela Tatu Piscinas em MS" onclick="openModal(this.src)">
+            <div class="overlay">Elegância Única!</div>
+            <img src="azulejo2.jpg" alt="Piscina de Azulejo instalada pela Tatu Piscinas em MS" onclick="openModal(this.src)">
+            <div class="overlay">Resistência Máxima!</div>
+            <img src="azulejo3.jpg" alt="Piscina de Azulejo instalada pela Tatu Piscinas em MS" onclick="openModal(this.src)">
+            <div class="overlay">Projetos Exclusivos!</div>
+          </div>
+          <button class="carousel-btn prev" onclick="prevSlide('azulejo')">❮</button>
+          <button class="carousel-btn next" onclick="nextSlide('azulejo')">❯</button>
+          <div class="carousel-dots" id="azulejoDots"></div>
+        </div>
+        <h3>Piscina de Azulejo</h3>
+        <p>Chique e resistente, perfeita pra quem quer um projeto único. Inclui instalação completa e kit de limpeza. Atendemos todo MS! <span style="font-size: 0.9em;">*Calçada não inclusa.</span></p>
+        <a href="https://wa.me/556796078271?text=Olá,%20tenho%20interesse%20na%20piscina%20de%20azulejo!" class="interest-btn">Tenho Interesse</a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2><i class="fas fa-phone-alt"></i> Entre em Contato</h2>
+      <div class="contact-info">
+        <p><i class="fas fa-phone-alt phone-icon"></i> <a href="https://wa.me/556796078271" aria-label="Contato via WhatsApp">(67) 9607-8271</a></p>
+        <p><i class="fab fa-facebook-f facebook-icon"></i> <a href="https://www.facebook.com/share/1GJaH1GL5F/" target="_blank" aria-label="Siga-nos no Facebook">Siga-nos no Facebook</a></p>
+      </div>
+      <a href="https://wa.me/556796078271?text=Olá,%20quero%20falar%20sobre%20minha%20piscina!" class="interest-btn">Fale Agora pelo WhatsApp!</a>
+    </section>
+  </div>
+
+  <div class="modal" id="imageModal">
+    <span class="modal-close" onclick="closeModal()">×</span>
+    <img id="modalImage" src="" alt="Imagem Ampliada">
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p><i class="fas fa-water"></i> Construindo piscinas, criando momentos.</p>
+      <p>© 2025 Tatu Piscinas - Todos os direitos reservados</p>
+      <p><i class="fas fa-phone-alt phone-icon"></i> <a href="https://wa.me/556796078271" aria-label="Contato via WhatsApp">(67) 9607-8271</a></p>
+      <p><i class="fab fa-facebook-f facebook-icon"></i> <a href="https://www.facebook.com/share/1GJaH1GL5F/" target="_blank" aria-label="Siga-nos no Facebook">Facebook</a></p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/556796078271" target="_blank"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+
+  <script>
+    let currentSlides = { fibra: 0, vinil: 0, azulejo: 0 };
+    function showSlide(type, index) {
+      const carousel = document.getElementById(`${type}Carousel`);
+      const slides = carousel.children;
+      const totalSlides = Math.floor(slides.length / 2); // Divide por 2 por causa dos overlays
+      const dotsContainer = document.getElementById(`${type}Dots`);
+      currentSlides[type] = (index + totalSlides) % totalSlides;
+      carousel.style.transform = `translateX(-${currentSlides[type] * 100}%)`;
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('span');
+        dot.className = `carousel-dot ${type}`;
+        if (i === currentSlides[type]) dot.classList.add('active');
+        dot.addEventListener('click', () => showSlide(type, i));
+        dotsContainer.appendChild(dot);
+      }
+    }
+    function nextSlide(type) { showSlide(type, currentSlides[type] + 1); }
+    function prevSlide(type) { showSlide(type, currentSlides[type] - 1); }
+    function openModal(src) {
+      document.getElementById('modalImage').src = src;
+      document.getElementById('imageModal').style.display = 'flex';
+    }
+    function closeModal() { document.getElementById('imageModal').style.display = 'none'; }
+    function toggleMenu() { document.querySelector('.nav').classList.toggle('active'); }
+    window.onload = () => {
+      ['fibra', 'vinil', 'azulejo'].forEach(type => showSlide(type, 0));
+      setInterval(() => nextSlide('vinil'), 5000);
+    };
+  </script>
+</body>
+</html>
